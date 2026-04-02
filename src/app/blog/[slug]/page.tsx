@@ -134,7 +134,7 @@ export default async function Blog({
       </h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]">
         <Suspense fallback={<p className="h-5" />}>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+          <p className="text-sm text-neutral-600">
             {formatDate(post.metadata.publishedAt)}
           </p>
         </Suspense>
@@ -142,7 +142,7 @@ export default async function Blog({
       <TableOfContents items={tocItems} />
       <article
         id="target-content"
-        className={`prose dark:prose-invert ${styles.article}`}
+        className={`prose ${styles.article}`}
       >
         <MDXRemote source={post.source} components={mdxComponents} />
       </article>
