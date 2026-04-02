@@ -45,53 +45,53 @@ export function ProjectCard({
   return (
     <Card
       className={
-        "overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
+        "overflow-hidden hover:shadow-2xl hover:-translate-y-1 shadow-brand-neutral-300/40 transition-all duration-300 ease-out h-full bg-white/50 backdrop-blur-md rounded-3xl"
       }
     >
-      <div className="flex flex-col h-full">
+      <div className="flex flex-col h-full pb-2">
         <Link href={href || "#"} className="flex flex-col" target={target}>
           <div
             className={cn("block", className)}
-        >
-          {video && (
-            <video
-              src={video}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
-            />
-          )}
-          {image && (
-            <Image
-              src={image}
-              alt={title}
-              width={500}
-              height={300}
-              className="h-40 w-full overflow-hidden object-cover object-top"
-            />
-          )}
-        </div>
-        <CardHeader className="px-3 mt-2">
-          <div className="space-y-1">
-            <CardTitle className="mt-1 text-base">{title}</CardTitle>
-            <time className="font-sans text-xs">{dates}</time>
-            <div className="hidden font-sans text-xs underline print:visible">
-              {link?.replace("https://", "").replace("www.", "").replace("/", "")}
-            </div>
-            <div className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
-              <MDXRemote source={description} />
-            </div>
+          >
+            {video && (
+              <video
+                src={video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+              />
+            )}
+            {image && (
+              <Image
+                src={image}
+                alt={title}
+                width={500}
+                height={300}
+                className="h-40 w-full overflow-hidden object-cover object-top"
+              />
+            )}
           </div>
-        </CardHeader>
-      </Link>
-      <CardContent className="mt-auto flex flex-col px-3">
+          <CardHeader className="px-3 mt-2">
+            <div className="space-y-1">
+              <CardTitle className="mt-1 text-base text-brand-neutral-900">{title}</CardTitle>
+              <time className="font-sans text-xs text-brand-neutral-600">{dates}</time>
+              <div className="hidden font-sans text-xs underline print:visible">
+                {link?.replace("https://", "").replace("www.", "").replace("/", "")}
+              </div>
+              <div className="prose max-w-full text-pretty font-sans text-xs text-brand-neutral-800">
+                <MDXRemote source={description} />
+              </div>
+            </div>
+          </CardHeader>
+        </Link>
+        <CardContent className="mt-auto flex flex-col px-3">
           {tags && tags.length > 0 && (
             <div className="mt-2 flex flex-wrap gap-1">
               {tags?.map((tag) => (
                 <Badge
-                  className="px-1 py-0 text-[10px]"
+                  className="px-2 py-1 text-[10px]"
                   variant="secondary"
                   key={tag}
                 >

@@ -7,7 +7,7 @@
 @theme {
   --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
   --radius: 0.5rem;
-  
+
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
 
@@ -35,6 +35,19 @@
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
+
+
+  --color-brand-neutral-50: #F9FAFA;
+  --color-brand-neutral-100: #F4F5F5;
+  --color-brand-neutral-200: #EAECEC;
+  --color-brand-neutral-300: #C9CFCF;
+  --color-brand-neutral-400: #A9B1B1;
+  --color-brand-neutral-500: #899494;
+  --color-brand-neutral-600: #6B7676;
+  --color-brand-neutral-700: #4E5656;
+  --color-brand-neutral-800: #303636;
+  --color-brand-neutral-900: #1B1F1F;
+  --color-brand-neutral-950: #090A0A;
 }
 
 @layer base {
@@ -101,28 +114,29 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
 h3 code {
-  @apply !text-lg md:!text-xl;
+  @apply !text-lg;
 }
 
 pre {
   @apply !px-0 rounded-lg overflow-x-auto py-4
 }
- 
+
 pre [data-line] {
   @apply px-4
 }
 
 code {
-  @apply text-sm md:text-base !leading-loose;
+  @apply text-sm !leading-loose;
 }
 
-pre > code {
+pre>code {
   counter-reset: line;
 }
 
@@ -131,8 +145,9 @@ code[data-theme*=" "] span {
   color: var(--shiki-light);
   background-color: var(--shiki-light-bg);
 }
- 
+
 @media (prefers-color-scheme: dark) {
+
   code[data-theme*=" "],
   code[data-theme*=" "] span {
     color: var(--shiki-dark);
@@ -144,7 +159,7 @@ code[data-line-numbers] {
   counter-reset: line;
 }
 
-code[data-line-numbers] > [data-line]::before {
+code[data-line-numbers]>[data-line]::before {
   counter-increment: line;
   content: counter(line);
   @apply inline-block w-4 mr-4 text-right text-gray-500;
@@ -154,7 +169,7 @@ code {
   counter-reset: line;
 }
 
-code > [data-line]::before {
+code>[data-line]::before {
   counter-increment: line;
   content: counter(line);
 
@@ -166,10 +181,10 @@ code > [data-line]::before {
   color: gray;
 }
 
-code[data-line-numbers-max-digits="2"] > [data-line]::before {
+code[data-line-numbers-max-digits="2"]>[data-line]::before {
   width: 2rem;
 }
 
-code[data-line-numbers-max-digits="3"] > [data-line]::before {
+code[data-line-numbers-max-digits="3"]>[data-line]::before {
   width: 3rem;
 }

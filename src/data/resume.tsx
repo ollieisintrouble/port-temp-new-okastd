@@ -2,7 +2,7 @@ import { Icons } from "@/components/icons";
 import { Contact, HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
-  name: "Khanh Van (Oliver) Nguyen",
+  name: "Oliver Nguyen",
   initials: "ON",
   url: "https://linkedin.com/in/kvanux",
   location: "Ho Chi Minh City, Vietnam",
@@ -10,7 +10,7 @@ export const DATA = {
   description: "Product Designer / Design Engineer",
   summary:
     "Experienced Product Designer with 4+ years in designing digital products, blending business analysis with technical expertise. Skilled in problem solving, requirements analysis, and cross-functional collaboration. Passionate about transforming complex requirements into intuitive digital experiences.",
-  avatarUrl: "/me.webp",
+  avatarUrl: "/me2.PNG",
   skills: [
     "UX Design",
     "UI Design",
@@ -29,6 +29,14 @@ export const DATA = {
     "Data Visualization",
     "Project Management",
     "Cross-Functional Communication",
+  ],
+  skillsets: [
+    { label: "UI", value: 9 },
+    { label: "Design System", value: 8 },
+    { label: "Product Thinking", value: 7 },
+    { label: "Data & Insights", value: 6 },
+    { label: "Management", value: 7 },
+    { label: "Engineering", value: 6 },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -56,11 +64,11 @@ export const DATA = {
   work: [
     {
       company: "Lollypop Design Studio - Terralogic",
-      href: "https://lollypop.design/", 
+      href: "https://lollypop.design/",
       badges: [],
       location: "Ho Chi Minh City, Vietnam",
       title: "Senior Product Designer",
-      logoUrl: "/llp.webp", 
+      logoUrl: "/llp.webp",
       start: "April 2025",
       end: "Present",
       description:
@@ -68,11 +76,11 @@ export const DATA = {
     },
     {
       company: "Lollypop Design Studio - Terralogic",
-      href: "https://lollypop.design/", 
+      href: "https://lollypop.design/",
       badges: [],
       location: "Ho Chi Minh City, Vietnam",
       title: "Associate Senior Product Designer",
-      logoUrl: "/llp.webp", 
+      logoUrl: "/llp.webp",
       start: "April 2024",
       end: "April 2025",
       description:
@@ -84,7 +92,7 @@ export const DATA = {
       badges: [],
       location: "Ho Chi Minh City, Vietnam",
       title: "Product Designer",
-      logoUrl: "/llp.webp", 
+      logoUrl: "/llp.webp",
       start: "May 2022",
       end: "April 2024",
       description:
@@ -92,11 +100,11 @@ export const DATA = {
     },
     {
       company: "UX Rescue",
-      href: "#", 
+      href: "#",
       badges: [],
       location: "Remote",
       title: "Intern UX/UI Designer",
-      logoUrl: "/uxrescue_logo.webp", 
+      logoUrl: "/uxrescue_logo.webp",
       start: "October 2021",
       end: "May 2022",
       description: "Provided supports to UX/UI design projects.",
@@ -116,25 +124,25 @@ export const DATA = {
   education: [
     {
       school: "University of Economics Ho Chi Minh City",
-      href: "#", 
+      href: "#",
       degree: "Bachelor's Degree in International Business",
-      logoUrl: "/unnamed.jpg", 
+      logoUrl: "/unnamed.jpg",
       start: "2016",
       end: "2020",
     },
     {
       school: "Grow with Google",
-      href: "https://grow.google/certificates/ux-design/", 
+      href: "https://grow.google/certificates/ux-design/",
       degree: "UX Design Professional Certificate",
-      logoUrl: "/Google_Icons-09-512.webp", 
+      logoUrl: "/Google_Icons-09-512.webp",
       start: "2022",
       end: "2022",
     },
     {
       school: "HarvardX Online Education",
-      href: "https://certificates.cs50.io/456dad0f-a6d0-4873-a9fe-5995cc476f8f.pdf?size=letter", 
+      href: "https://certificates.cs50.io/456dad0f-a6d0-4873-a9fe-5995cc476f8f.pdf?size=letter",
       degree: "CS50x Computer Science",
-      logoUrl: "/1631309789389.jpg", 
+      logoUrl: "/1631309789389.jpg",
       start: "2025",
       end: "2025",
     },
@@ -142,7 +150,7 @@ export const DATA = {
   projects: [
     {
       title: "OKA UI Design System",
-      href: "/blog/okaui", 
+      href: "/blog/okaui",
       dates: "Aug 2025 - Dec 2025",
       active: false,
       description:
@@ -157,18 +165,18 @@ export const DATA = {
     },
     {
       title: "Bus Fleet Management System",
-      href: "/blog/tms", 
+      href: "/blog/tms",
       dates: "Aug 2023 - Mar 2025",
       active: false,
       description:
         "Digitalized school bus service management with live tracking and routing optimization. Improved operational efficiency by ~50%.",
       technologies: ["UX Design", "UI Design", "BPMN", "Information Architecture"],
       image: "/tms.webp",
-      links: [], 
+      links: [],
     },
     {
       title: "QIK Finance",
-      href: "/blog/qik", 
+      href: "/blog/qik",
       dates: "Aug 2024 - Dec 2024",
       active: false,
       description: "The best Personal Finance Management tool out there.",
@@ -182,7 +190,7 @@ export const DATA = {
     },
     {
       title: "Internal Quarterly Newsletter",
-      href: "/blog/qnews", 
+      href: "/blog/qnews",
       dates: "May 2024 - Jun 2024",
       active: false,
       description:
@@ -193,7 +201,7 @@ export const DATA = {
     },
     {
       title: "Productivity Insights Dashboard",
-      href: "/blog/productivity", 
+      href: "/blog/productivity",
       dates: "Jun 2024 - Oct 2024",
       active: false,
       description:
@@ -202,7 +210,7 @@ export const DATA = {
       image: "/insights.webp",
       links: [],
     },
-    
+
     {
       title: "HRMS Market Research",
       href: "https://drive.google.com/file/d/1yshDx4vM8H1J3sXncJTwY3fuMoYQjggk/view?usp=sharing",
@@ -219,7 +227,7 @@ export const DATA = {
     },
     {
       title: "Unilever Loyalty Program - Proof of Concept",
-      href: "https://drive.google.com/file/d/1n3uJ0i4NbS-U3QDPXI3qQliCH-7SbsYz/view?usp=sharing", 
+      href: "https://drive.google.com/file/d/1n3uJ0i4NbS-U3QDPXI3qQliCH-7SbsYz/view?usp=sharing",
       dates: "Mar 2025 - Apr 2025",
       active: true,
       description: "I fortunately had a chance to sit down with Unilever to enhance their Loyalty Program in Vietnam - Qua Tang Unilever. The final project is indisclosable but here is the Proof of Concepts that initialized the whole thing.",
@@ -233,7 +241,7 @@ export const DATA = {
     },
     {
       title: "Work Management System",
-      href: "/blog/taskmng", 
+      href: "/blog/taskmng",
       dates: "Dec 2022 - May 2023",
       active: false,
       description: "Lightweight task management tool with real-time mobile notifications.",
@@ -243,7 +251,7 @@ export const DATA = {
     },
     {
       title: "Employee Shift Scheduler",
-      href: "/blog/empshift", 
+      href: "/blog/empshift",
       dates: "Mar 2025 - Apr 2025",
       active: false,
       description: "The Employee Shift Scheduling is a web-based tool designed to handle the complexities of employee shift scheduling. Using the method of Genetics algorithm to flexibly generate schedules that works around constraints as much as possible.",

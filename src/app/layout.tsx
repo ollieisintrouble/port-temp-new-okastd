@@ -2,6 +2,7 @@ import NavbarWrapper from "@/components/navbar-wrapper";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
+import AuroraBackground from "@/components/tripled/aurora-background";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -49,12 +50,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className="min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6"
+        className="min-h-screen font-sans antialiased"
       >
         <ThemeProvider defaultTheme="light">
           <TooltipProvider delayDuration={0}>
-            {children}
-            <NavbarWrapper />
+            <AuroraBackground>
+              <div className="max-w-[1200px] mx-auto py-10 px-6 md:px-0">
+                {children}
+              </div>
+              <NavbarWrapper />
+            </AuroraBackground>
           </TooltipProvider>
         </ThemeProvider>
       </body>
